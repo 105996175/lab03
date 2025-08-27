@@ -1,0 +1,107 @@
+<!doctype html>
+
+<head>
+     <meta charset="utf-8" >
+	 <meta name="description" content="CWA Help Desk Appointment Form" >
+	 <meta name="keywords" content="HTML, Form, tags" >
+	 <meta name="author" content="Lai Man Yee" >
+	 <title>CWA Help Desk Appointment</title>
+</head>
+<body>
+     
+     <a href="http://www.cwa.edu.au"></a>
+	 <img src="logo.png" alt="logo">
+
+     <h1>CWA Help Desk Appointment</h1>
+     <p>The Help Desk is located in ATC620. Open 10:30 to 19:00 Monday to Friday </p>
+     <p>Check Blackboard for when CWA tutors will be there </p>
+	 
+	 <form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php" >
+	     <fieldset>
+		      <legend>Student Details</legend>
+			  <p>
+			    <label for="student-id">Student ID </label>
+				<input type="text" name="student-id" id="student-id" minlength="7" maxlength="10" required>
+			  </p>
+			  
+			  <p>
+			     <!-- technique 1 to associate label and input: use for atribute -->
+				 <label for="given-name">Given Name</label>
+				 <input type="text" name="given-name" id="given-name" maxlength="15" size="20" pattern="^[a-zA-Z ]+$" required>
+				 
+				 <label for="family-name">Family Name</label>
+				 <input type="text" name="family-name" id="family-name" maxlength="15" size="20" pattern="^[a-zA-Z ]+$" required>
+				 
+			   </p>
+			   
+			</fieldset>
+			<fieldset>
+			<legend>Your unit</legend>
+			<p>
+			   <label for="cos10011">COS10011 </label>
+			   <input type="radio" name="unit" id="cos10011" value="cos10011" required>
+			   
+			   <label for="cos60004">COS60004 </label>
+			   <input type="radio" name="unit" id="cos60004" value="cos60004">
+			   
+			   <label for="cos60007">COS60007 </label>
+			   <input type="radio" name="unit" id="cos60007" value="cos60007">
+			</p>
+			
+			<p><label for="tutor">Your Tutor</label>
+			   <select name="tutor" id="tutor">
+				   <option value="selected">Please select</option>
+			       <option value="3">Ms Pawani</option>
+				   <option value="2">Mr Ang</option>
+				   <option value="1">Ms Siti</option>
+			   </select>
+			</p>
+			</fieldset>
+
+			<fieldset>
+			<legend>Issue</legend>
+			<p>
+			   <label for="html">HTML </label>
+			   <input type="checkbox" name="issue" id="html" value="html" checked>
+
+			   <label for="css">CSS </label>
+			   <input type="checkbox" name="issue" id="css" value="css">
+
+			   <label for="javascript">JavaScript </label>
+			   <input type="checkbox" name="issue" id="javascript" value="javascript">
+
+			   <label for="php">PHP </label>
+			   <input type="checkbox" name="issue" id="php" value="php">
+
+			   <label for="mysql">MySQL </label>
+			   <input type="checkbox" name="issue" id="mysql" value="mysql">
+            </p>
+
+			<p><label>Description of Issue
+			   <br   />
+			   <textarea name="description of issue" rows="5" cols="40">
+			        Write description of your problem here...
+			   </textarea>
+			</label></p>
+			</fieldset>
+
+			<fieldset>
+			<legend>Preferred Date/Time</legend>
+			<p>
+			  <label for="date">Date</label>
+			  <input type="date" name="date" id="date" placeholder="dd/mm/yyyy" pattern="\d{1,2}\/\d{1,2}\/\d{4}" required>
+            <br>
+			  <label for="time">Time</label>
+			  <input type="time" name="date" id="date" placeholder="00:00" pattern="^((10:30)|(1[1-8]:[0-5][0-9])|(19:00))$">
+			</p>
+		    </fieldset>
+			   
+			
+			<input type="submit" value="Book">
+			<input type="reset" value="Reset Form">
+			
+		</form>
+	
+	</body>
+	</html>
+	 
